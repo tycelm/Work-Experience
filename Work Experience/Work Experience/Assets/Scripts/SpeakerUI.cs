@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class SpeakerUI : MonoBehaviour
 {
    public Image portrait;
-   public Text fullName;
    public Text dialog;
 
    private Character speaker;
@@ -14,7 +13,6 @@ public class SpeakerUI : MonoBehaviour
        set{
            speaker = value;
            portrait.sprite = speaker.portrait;
-           fullName.text = speaker.fullName;
        }
    }
 
