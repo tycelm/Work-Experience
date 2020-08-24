@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: be7796e14ce39bf4a8a0bf978ebd80a6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Naomis Hand
+  fontNames:
+  - Naomis Hand
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 28419aa4ceca5f24ca0901a6055b06b7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
