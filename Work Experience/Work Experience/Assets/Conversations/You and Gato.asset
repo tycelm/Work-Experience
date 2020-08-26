@@ -15,12 +15,27 @@ MonoBehaviour:
   speakerLeft: {fileID: 11400000, guid: 6c025b45c1cdd3049918676951b2212c, type: 2}
   speakerRight: {fileID: 11400000, guid: 9b7cbc0fff496d6489eedd4072d51e35, type: 2}
   lines:
-  - character: {fileID: 0}
-    portrait: {fileID: 0}
-    text: 
-  - character: {fileID: 0}
-    portrait: {fileID: 0}
-    text: 
-  - character: {fileID: 0}
-    portrait: {fileID: 0}
-    text: 
+  - character: {fileID: 11400000, guid: 6c025b45c1cdd3049918676951b2212c, type: 2}
+    portrait: {fileID: 21300000, guid: 538fad56582d6034fad079d7574618ec, type: 3}
+    text: Good morning Boss.
+  - character: {fileID: 11400000, guid: 9b7cbc0fff496d6489eedd4072d51e35, type: 2}
+    portrait: {fileID: 21300000, guid: 0638cfdc485f35b4ebd4496151ca1eda, type: 3}
+    text: Zzz...
+  - character: {fileID: 11400000, guid: 6c025b45c1cdd3049918676951b2212c, type: 2}
+    portrait: {fileID: 21300000, guid: 538fad56582d6034fad079d7574618ec, type: 3}
+    text: You know, I envy you sometimes.
+  - character: {fileID: 11400000, guid: 6c025b45c1cdd3049918676951b2212c, type: 2}
+    portrait: {fileID: 21300000, guid: 538fad56582d6034fad079d7574618ec, type: 3}
+    text: Not having to bother with disturbing feelings, such as the crushing fear
+      of having an unmarried future where you live alone while your regrets slowly
+      cave in, must be a very relieving feeling.
+  - character: {fileID: 11400000, guid: 6c025b45c1cdd3049918676951b2212c, type: 2}
+    portrait: {fileID: 21300000, guid: 538fad56582d6034fad079d7574618ec, type: 3}
+    text: But tell me, can't you help but shudder just by thinking about it? Personally,
+      that's the things that keep me up at night.
+  - character: {fileID: 11400000, guid: 9b7cbc0fff496d6489eedd4072d51e35, type: 2}
+    portrait: {fileID: 21300000, guid: 0638cfdc485f35b4ebd4496151ca1eda, type: 3}
+    text: I...
+  - character: {fileID: 11400000, guid: 9b7cbc0fff496d6489eedd4072d51e35, type: 2}
+    portrait: {fileID: 21300000, guid: 0638cfdc485f35b4ebd4496151ca1eda, type: 3}
+    text: I'm a cat

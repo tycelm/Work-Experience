@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SpeakerUI : MonoBehaviour
 {
    public Image portrait;
-   public Text dialog;
+   public TextMeshProUGUI dialog;
 
    private Character speaker;
    public Character Speaker
