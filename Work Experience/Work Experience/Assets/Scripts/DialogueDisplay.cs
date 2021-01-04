@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
 public class DialogueDisplay : MonoBehaviour
 {
@@ -7,6 +9,8 @@ public class DialogueDisplay : MonoBehaviour
     public GameObject speakerLeft;
     public GameObject speakerRight;
     public GameObject player;
+    public Animator animatorleft;
+    public Animator animatorright;
     private CharacterController2D myPlayer;
     private SpeakerUI speakerUILeft;
     private SpeakerUI speakerUIRight;
@@ -34,7 +38,9 @@ public class DialogueDisplay : MonoBehaviour
     
     void AdvanceConversation()
     {
-        if(activeLineIndex < conversation.lines.Length)
+        animatorleft.SetBool("IsOpen", false);
+        animatorright.SetBool("IsOpen", false);
+        if (activeLineIndex < conversation.lines.Length)
         {
             myPlayer.canMove = false;
             DisplayLine();
@@ -65,9 +71,21 @@ public class DialogueDisplay : MonoBehaviour
             void SetDialog(SpeakerUI activeSpeakerUI, SpeakerUI inactiveSpeakerUI, string text)
             {
                 activeSpeakerUI.portrait.sprite = line.portrait;
-                activeSpeakerUI.Dialog = text;
+                StartCoroutine(TypeSentence(text, activeSpeakerUI));
                 activeSpeakerUI.Show();
                 inactiveSpeakerUI.Hide();
+                animatorleft.SetBool("IsOpen", true);
+                animatorright.SetBool("IsOpen", true);
+            }
+
+            IEnumerator TypeSentence(string sentence, SpeakerUI activeSpeakerUI)
+            {
+                activeSpeakerUI.Dialog = "";
+                foreach (char letter in sentence.ToCharArray())
+                {
+                    activeSpeakerUI.Dialog += letter;
+                    yield return null;
+                }
             }
         }
     }
