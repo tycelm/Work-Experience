@@ -71,6 +71,7 @@ public class DialogueDisplay : MonoBehaviour
             void SetDialog(SpeakerUI activeSpeakerUI, SpeakerUI inactiveSpeakerUI, string text)
             {
                 activeSpeakerUI.portrait.sprite = line.portrait;
+                StopAllCoroutines();
                 StartCoroutine(TypeSentence(text, activeSpeakerUI));
                 activeSpeakerUI.Show();
                 inactiveSpeakerUI.Hide();

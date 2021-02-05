@@ -1753,6 +1753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1011763107}
   - component: {fileID: 1011763106}
+  - component: {fileID: 1011763109}
   - component: {fileID: 1011763108}
   m_Layer: 0
   m_Name: room exist door
@@ -1851,6 +1852,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.67000014, y: 7.58}
   m_EdgeRadius: 0
+--- !u!114 &1011763109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011763105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5190a8c719c484c8b0d21abc59acbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelToLoad: 2
+  customImage: {fileID: 68342974}
 --- !u!1 &1037649624
 GameObject:
   m_ObjectHideFlags: 0
