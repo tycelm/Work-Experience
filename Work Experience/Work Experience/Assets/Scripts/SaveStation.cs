@@ -6,9 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class SaveStation : MonoBehaviour
 {
+    public GameObject player;
+    public Status stat;
+    public CharacterController2D move;
+    public GameObject saveImage;
+
     public int level;
     [SerializeField] private Image customImage;
-    [SerializeField] private Image savedImage;
 
     void Start()
     {
@@ -23,8 +27,10 @@ public class SaveStation : MonoBehaviour
                 if(Input.GetKeyDown("space"))
                 {
                     customImage.enabled = false;
-                    savedImage.enabled = true;
-                    Invoke("Remove", 1);
+                    saveImage.SetActive(true);
+                    move.canMove = false;
+                    Invoke("Remove", 3);
+                    
 
                     SaveSystem.SavePlayer(this);
                 }
@@ -38,8 +44,9 @@ public class SaveStation : MonoBehaviour
                 if(Input.GetKeyDown("space"))
                 {
                     customImage.enabled = false;
-                    savedImage.enabled = true;
-                    Invoke("Remove", 1);
+                    saveImage.SetActive(true);
+                    move.canMove = false;
+                    Invoke("Remove", 3);
 
                     SaveSystem.SavePlayer(this);
                 }
@@ -56,6 +63,7 @@ public class SaveStation : MonoBehaviour
 
         void Remove()
         {
-            savedImage.enabled = false;
+            move.canMove = true;
+            saveImage.SetActive(false);
         }
 }

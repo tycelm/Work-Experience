@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196d9a2fe97ac2f47afeb94c3c12b6da, type: 3}
+  m_Name: You & Activist
+  m_EditorClassIdentifier: 
+  speakerLeft: {fileID: 11400000, guid: 6c025b45c1cdd3049918676951b2212c, type: 2}
+  speakerRight: {fileID: 11400000, guid: 705f131a82b0ea14193b5d025aeafe7c, type: 2}
+  lines:
+  - character: {fileID: 11400000, guid: 705f131a82b0ea14193b5d025aeafe7c, type: 2}
+    portrait: {fileID: 21300000, guid: 2a830fcdd91db5847b695e4b9e5c4501, type: 3}
+    text: Artificial Lives Matter!

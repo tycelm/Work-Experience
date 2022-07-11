@@ -12,5 +12,12 @@ public class PlayerData
     public PlayerData (SaveStation player)
     {
         level = player.level;
+
+        health = player.stat.health;
+
+        position = new float[3];
+        position[0] = player.player.transform.position.x;
+        position[1] = player.player.transform.position.y;
+        position[2] = player.player.transform.position.z;
     }
 }

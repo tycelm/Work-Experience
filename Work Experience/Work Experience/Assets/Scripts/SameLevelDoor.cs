@@ -9,6 +9,8 @@ public class SameLevelDoor : MonoBehaviour
     public GameObject target;
     public bool wentIn;
     [SerializeField] private Image customImage;
+    public Animator anim;
+    public Image blac;
     
 
         void OnTriggerEnter2D(Collider2D col)
@@ -18,8 +20,7 @@ public class SameLevelDoor : MonoBehaviour
                 customImage.enabled = true;
                 if(Input.GetKeyDown("space"))
                 {
-                    player.transform.position = target.transform.position;
-                    wentIn = true;
+                    StartCoroutine("Transport");
                 }
             }
         }
@@ -30,8 +31,7 @@ public class SameLevelDoor : MonoBehaviour
             {
                 if(Input.GetKeyDown("space"))
                 {
-                    player.transform.position = target.transform.position;
-                    wentIn = true;
+                    StartCoroutine("Transport");
                 }
             }
         }
@@ -43,5 +43,13 @@ public class SameLevelDoor : MonoBehaviour
                 customImage.enabled = false;
             }
         }
+
+    IEnumerator Transport()
+    {
+        anim.SetBool("Fade", true);
+        yield return new WaitUntil(() => blac.color.a == 1);
+        player.transform.position = target.transform.position;
+        anim.SetBool("Fade", false);
+    }
     
 }

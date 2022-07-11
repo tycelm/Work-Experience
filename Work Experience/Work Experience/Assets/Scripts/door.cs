@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class door : MonoBehaviour
 {
-    public int LevelToLoad;
     [SerializeField] private Image customImage;
+    public Animator anim;
+    public Image blac;
     
 
         void OnTriggerEnter2D(Collider2D col)
@@ -17,7 +18,7 @@ public class door : MonoBehaviour
                 customImage.enabled = true;
                 if(Input.GetButtonDown("Space"))
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    StartCoroutine("Leave");
                 }
             }
         }
@@ -28,7 +29,7 @@ public class door : MonoBehaviour
             {
                 if(Input.GetButtonDown("Space"))
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    StartCoroutine("Leave");
                 }
             }
         }
@@ -40,5 +41,12 @@ public class door : MonoBehaviour
                 customImage.enabled = false;
             }
         }
-    
+
+    IEnumerator Leave()
+    {
+        anim.SetBool("Fade", true);
+        yield return new WaitUntil(() => blac.color.a == 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
 }

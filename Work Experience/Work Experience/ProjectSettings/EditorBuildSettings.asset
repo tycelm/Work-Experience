@@ -9,12 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 359d32c46f8506442bd1da02f6efa18c
   - enabled: 1
+    path: Assets/Scenes/Agreement.unity
+    guid: 0f86a571302ce7545adf9e04463a5e54
+  - enabled: 1
     path: Assets/Scenes/Work Experience.unity
     guid: 9fb3f9d7a24f55645b295a6baeb41160
   - enabled: 1
     path: Assets/Scenes/The Streets.unity
     guid: cfaeb23c65b029349990bdab896ee744
   - enabled: 1
+    path: Assets/Scenes/Front Desk.unity
+    guid: 490902ff51ab576499ee4780b89cda17
+  - enabled: 0
     path: Assets/Scenes/The Test Lab.unity
     guid: 182f3e05c4789ce4bb9cb109af75add6
   m_configObjects: {}
